@@ -2,6 +2,7 @@ import { catsData } from "./data.js"
 
 const emotionsRadios=document.getElementById("emotion-radios")
 const getImageBtn=document.getElementById("get-image-btn")
+const gifsOnlyOption=document.getElementById("gifs-only-option")
 
 function getEmotionsArray(cats){
    const emotionsArray=[]
@@ -56,24 +57,27 @@ getImageBtn.addEventListener("click",getMatchingCatsArray)
 
 function getMatchingCatsArray(){
   if(document.querySelector(`input[type="radio"]:checked`)){
-
-    console.log(document.querySelector(`input[type]="radio":checked`).value)
+     
+    const isGif=gifsOnlyOption.checked
+    console.log(isGif)
+    console.log(document.querySelector(`input[type="radio"]:checked`).value)
   }
 }
 
 
 
-// let powerArray=[]
-// for (let character of characters){
-//   // console.log(character.powers)
-//   for(let power of character.powers){
-
-//     // console.log(power)
-//     powerArray.push(power)
-//   }
-// }
-
-// console.log(powerArray)
 
 
 
+// filter
+// const ages=[1,4,8,15,18,22,30,5,50]
+// const adults=ages.filter(function(age){
+//   return age>=18
+
+// })
+// console.log(adults)
+
+// const children=ages.filter(function(age){
+//   return age<18
+// })
+// console.log(children)
